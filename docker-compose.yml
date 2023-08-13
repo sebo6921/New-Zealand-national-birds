@@ -11,7 +11,7 @@ services:
     ports:
       - "3306:3306"
     volumes:
-      - ./:/sql # scripts for creating tables and inserting data
+      - ./sql:/sql # scripts for creating tables and inserting data
       - ./mysql-data:/var/lib/mysql # Where mysql stores its data
     container_name: cosc203mysql
 
