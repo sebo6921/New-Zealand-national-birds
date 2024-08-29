@@ -14,6 +14,7 @@ INSERT INTO ConservationStatus (status_id, status_name, status_colour) VALUES (1
 -- Insert Hihi into Bird Table. 
 SELECT status_id FROM ConservationStatus WHERE status_name = "Nationally Vulnerable" INTO @status_id;
 INSERT INTO Bird (bird_id, primary_name, english_name, scientific_name, order_name, family, weight, length, status_id)
+
 VALUES (1, "Hihi", "Stitchbird", "Notiomystis cincta", "Passeriformes", "Notiomystidae", "33", "18", @status_id);
 INSERT INTO Photos (bird_id, filename, photographer) VALUES (1, "stitchbird-2.jpg", "Tony Whitehead");
 
