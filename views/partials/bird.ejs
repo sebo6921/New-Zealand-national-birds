@@ -1,7 +1,10 @@
+
 <div class="card">
     <div class="card-image">
         <div class="card-title">
-            <p lang="mi"><%= bird.primary_name %></p>
+            <p lang="mi" style="color: white;">
+                <a href="/birds/<%= bird.bird_id %>" style="color: inherit; text-decoration: none;"><%= bird.primary_name %></a>
+            </p>
             <span>© <%= bird.photographer %></span>
         </div>
         <img src="/images/<%= bird.filename %>" alt="<%= bird.primary_name %>">
@@ -14,9 +17,17 @@
             <li><b>Scientific Name</b><span><%= bird.scientific_name %></span></li>
             <li><b>Family</b><span><%= bird.family %></span></li>
             <li><b>Order</b><span><%= bird.order_name %></span></li>
-            <li><b>Status</b><span><%= bird.status_colour %></span></li>
+            <li><b>Status</b><span><%= bird.status_name %></span></li>
             <li><b>Length</b><span><%= bird.length %> cm</span></li>
             <li><b>Weight</b><span><%= bird.weight %> g</span></li>
         </ul>
+        <div>
+            <a class="button" href="/birds/<%= bird.bird_id %>/update">Edit</a>
+
+            <form action="/birds/<%= bird.bird_id %>/delete" method="POST" style="display:inline;">
+                
+                <button type="submit" class="button">Delete</button>
+            </form>
+        </div>
     </div>
 </div>

@@ -1,5 +1,11 @@
 <aside>
     <a class="button" href="/birds">Home</a>
+    <a class="button" href="/birds/create">CREATE BIRD</a>
+    <form id="searchForm" action="/birds/search" method="GET">
+        <label for="bird_identifier">Enter Bird Name or ID:</label>
+        <input type="text" id="bird_identifier" name="bird_identifier" required>
+        <button class="button" "submit">Search</button>
+    </form>
 
     <% if (status !== null) { %>
         <h2>Conservation Status</h2>

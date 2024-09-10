@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+    <%- include('partials/sidebar', { status: status, results: null }) %>
+
+    <main>
+        <h1><%= title %></h1>
+        <form action="/birds/<%= bird.bird_id %>/update" method="POST" enctype="multipart/form-data">
+            <div>
+                <label for="primary_name">Primary Name:</label>
+                <input type="text" id="primary_name" name="primary_name" value="<%= bird.primary_name %>" required>
+            </div>
+            <div>
+                <label for="english_name">English Name:</label>
+                <input type="text" id="english_name" name="english_name" value="<%= bird.english_name %>" required>
+            </div>
+            <div>
+                <label for="scientific_name">Scientific Name:</label>
+                <input type="text" id="scientific_name" name="scientific_name" value="<%= bird.scientific_name %>" required>
+            </div>
+            <div>
+                <label for="order_name">Order Name:</label>
+                <input type="text" id="order_name" name="order_name" value="<%= bird.order_name %>" required>
+            </div>
+            <div>
+                <label for="family">Family:</label>
+                <input type="text" id="family" name="family" value="<%= bird.family %>" required>
+            </div>
+            <div>
+                <label for="weight">Weight (grams):</label>
+                <input type="number" id="weight" name="weight" value="<%= bird.weight %>" required>
+            </div>
+            <div>
+                <label for="length">Length (cm):</label>
+                <input type="step" id="length" name="length" value="<%= bird.length %>" required>
+            </div>
+            <div>
+                <label for="status_id">Conservation Status:</label>
+                <select id="status_id" name="status_id" required>
+                    <% status.forEach(function(status) { %>
+                        <option value="<%= status.status_id %>" <%= bird.status_id == status.status_id ? 'selected' : '' %>><%= status.status_name %></option>
+                    <% }); %>
+                </select>
+            </div>
+            <div>
+                <label for="bird_image">Bird Image:</label>
+                <input type="file" id="bird_image" name="bird_image" accept="image/*">
+            </div>
+            <div>
+                <label for="photographer">Photographer:</label>
+                <input type="text" id="photographer" name="photographer" value="<%= bird.photographer %>">
+            </div>
+            <div>
+                <button class="button" href="/birds" type="submit">Update Bird</button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>

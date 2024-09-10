@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+    <%- include('partials/sidebar', { status: status, results: null }) %>
+    <style>
+        body {
+            background-color: white;
+        }
+    </style>
+    <main>
+        <h1>Create New Bird</h1>
+        <form action="/birds/create" method="POST" enctype="multipart/form-data">
+            <div>
+                <label for="primary_name">Primary Name:</label>
+                <input type="text" id="primary_name" name="primary_name" required>
+            </div>
+            <div>
+                <label for="english_name">English Name:</label>
+                <input type="text" id="english_name" name="english_name" required>
+            </div>
+            <div>
+                <label for="scientific_name">Scientific Name:</label>
+                <input type="text" id="scientific_name" name="scientific_name" required>
+            </div>
+            <div>
+                <label for="order_name">Order Name:</label>
+                <input type="text" id="order_name" name="order_name" required>
+            </div>
+            <div>
+                <label for="family">Family:</label>
+                <input type="text" id="family" name="family" required>
+            </div>
+            <div>
+                <label for="weight">Weight (grams):</label>
+                <input type="number" id="weight" name="weight" required>
+            </div>
+            <div>
+                <label for="length">Length (cm):</label>
+                <input type="number" id="length" name="length" required>
+            </div>
+            <div>
+                <label for="status_id">Conservation Status:</label>
+                <select id="status_id" name="status_id" required>
+                    <% status.forEach(function(status) { %>
+                        <option value="<%= status.status_id %>"><%= status.status_name %></option>
+                    <% }); %>
+                </select>
+            </div>
+            <div>
+                <label for="bird_image">Bird Image:</label>
+                <input type="file" id="bird_image" name="bird_image" accept="image/*">
+            </div>
+            <div>
+                <label for="photographer">Photographer:</label>
+                <input type="text" id="photographer" name="photographer">
+            </div>
+            <div>
+                <button class="button" type="submit">Create Bird</button>
+            </div>
+        </form>
+    </main>
+
+    <%- include('partials/footer') %>
+</body>
+</html>

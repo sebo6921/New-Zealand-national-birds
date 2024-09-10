@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            flex-direction: column;
+        }
+        main#birds {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .error-message {
+            text-align: center;
+        }
+        .error-message h1 {
+            font-size: 3em;
+            color: black;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <%- include('../partials/header.ejs') %>
+    <%- include('../partials/sidebar.ejs', { status: status, results: null }) %>
+    <main id="birds">
+        <div class="error-message">
+            <h1>404 Page <br><br> Sorry but we Can't<br><br> Find What You <br><br> Are looking <br><br>For</h1>
+        </div>
+    </main>
+    <%- include('../partials/footer.ejs') %>
+</body>
+</html>
