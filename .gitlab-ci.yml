@@ -7,5 +7,6 @@ pages:
   artifacts:
     paths:
       - public
+      - public/views
   only:
     - main
