@@ -1,3 +1,29 @@
-This is starter code for the back-end for COSC203 assignment 2.
+NZ Bird Information Web Application
+Project Overview
+A responsive web application for cataloging and displaying information about New Zealand bird species. This project demonstrates proficiency in full-stack web development, database management, and responsive design.
+Key Technologies
 
-It's similar to assignment 1, except it has an [Express Server for path routing](http://expressjs.com/en/guide/routing.html), and uses [EJS for Server-Side Rendering (SSR)](https://ejs.co/). The provided code still uses `nzbird.json` --- so your first task should be to replace it with a SQL database.
+Frontend: HTML5, CSS3 (Flexbox & Grid), JavaScript
+Backend: Node.js with Express.js
+Database: SQL (PostgreSQL)
+Template Engine: EJS (Embedded JavaScript)
+Version Control: Git
+
+Features
+
+Responsive grid layout for various screen sizes
+Interactive bird information cards
+CRUD operations for bird data
+Search and filter functionality
+Conservation status visualization
+
+Technical Highlights
+
+RESTful API for data management
+Server-side rendering for improved SEO
+Custom CSS using variables for easy theming
+Mobile-first responsive design
+Database integration with prepared statements for security
+
+
+This project showcases skills in creating a full-stack web application with a focus on clean code, responsive design, and efficient data management.
