@@ -25,3 +25,10 @@ A responsive web application for cataloging and displaying information about New
 - Database integration with prepared statements for security
 
 This project showcases skills in creating a full-stack web application with a focus on clean code, responsive design, and efficient data management.
+
+- In order to run this you will need to :
+1. git clone the repo
+2. npm install the dependencies
+3. npm run start
+4. click on the link which should bring you to the website
+5. Enjoy!
