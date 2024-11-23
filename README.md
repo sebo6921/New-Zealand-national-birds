@@ -28,7 +28,8 @@ This project showcases skills in creating a full-stack web application with a fo
 
 - In order to run this you will need to :
 1. git clone the repo
-2. npm install the dependencies
-3. npm run start
-4. click on the link which should bring you to the website
-5. Enjoy!
+2. setup SQL and create the database by running db_populate.sql and db_setup.sql this would create the SQL DB
+3. npm install the dependencies
+4. npm run start
+5. click on the link which should bring you to the website
+6. Enjoy!
